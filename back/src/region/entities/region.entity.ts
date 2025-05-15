@@ -29,7 +29,7 @@ export class Region {
     // @Column()
     // district: string
 
-     @Column({ nullable: true })
+    @Column({ nullable: true })
     image: string
 
     @Column()

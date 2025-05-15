@@ -8,8 +8,6 @@ const AddRegion = () => {
     const [id_stops, setId_stops] = useState('')
 
 
-
-
     const postData = async () => {
         if (!image || !id_stops
         ) {

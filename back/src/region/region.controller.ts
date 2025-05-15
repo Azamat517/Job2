@@ -13,6 +13,9 @@ export class RegionController {
   create(
     @UploadedFile() file: Express.Multer.File,
     @Body() createRegionDto: CreateRegionDto) {
+    if (file) {
+      createRegionDto.image = file.filename;
+    }
     return this.regionService.post(createRegionDto);
   }
 

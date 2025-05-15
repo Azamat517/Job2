@@ -11,8 +11,6 @@ export class RegionService {
   constructor(
     @InjectRepository(Region) private readonly regionRepo: Repository<Region>,
   ) { }
-
-
   async post(createRegionDto: CreateRegionDto, imageFilename?: string,) {
     const region = await this.regionRepo.create({
       ...createRegionDto,
@@ -34,10 +32,12 @@ export class RegionService {
     return await this.regionRepo.findOneBy({ id: id });
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} region`;
+  async remove(id: number) {
+    await this.regionRepo.delete({ id });
+    return id;
   }
 
+  
   async clear() {
     try {
       const isEmpty = await this.regionRepo.countBy({});
