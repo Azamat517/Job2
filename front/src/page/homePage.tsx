@@ -17,6 +17,12 @@ const HomePage = () => {
                 </button>
 
             </div>
+            <div className="homePage__box-info">
+                <div className="homePage__box-info__info">Остановки</div>
+                <div className="homePage__box-info__label">Количество остановок по городу Алматы</div>
+                <div className="homePage__box-info__label">Количество остановок по Области</div>
+                <div className="homePage__box-info__label">Общие количество</div>
+            </div>
             <div className="homePage__box__content">
                 {test ? <City /> : <Region />}
             </div>
