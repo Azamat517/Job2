@@ -6,8 +6,10 @@ import AddRegion from './page/addRegion'
 import './sass/homePage.sass'
 import './sass/region.sass'
 import './sass/addRegion.sass'
+import './sass/dialog.sass'
 import HomePage from './page/homePage'
 import AddCity from './page/addCity'
+import Maps from './page/maps'
 
 function App() {
 
@@ -19,7 +21,8 @@ function App() {
           <NavLink to={'/'} className='header__box'>Остановки</NavLink>
           <nav className='header__nav'>
             <div className='header__nav__box'>
-              <NavLink to={'/AddCity'}  className='header__nav__box__box'>Добвать остановки для города</NavLink>
+              <NavLink to={'/Maps'} className='header__nav__box__box'>Карта</NavLink>
+              <NavLink to={'/AddCity'} className='header__nav__box__box'>Добвать остановки для города</NavLink>
               <NavLink to={'/AddRegion'} className='header__nav__box__box'>Добвать остановки для области</NavLink>
             </div>
           </nav>
@@ -27,6 +30,7 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/Maps" element={<Maps />} />
         <Route path="/AddCity" element={<AddCity />} />
         <Route path="/AddRegion" element={<AddRegion />} />
       </Routes>

@@ -9,15 +9,15 @@ import { extname, join } from 'path';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Region]),
-  MulterModule.register({
-    storage: diskStorage({
-      destination: join(__dirname, '..', '..', 'uploads'),
-      filename: (req, file, cb) => {
-        const unique = Date.now() + '-' + Math.round(Math.random() * 1e9);
-        cb(null, `${file.fieldname}-${unique}${extname(file.originalname)}`);
-      },
-    }),
-  }),
+  // MulterModule.register({
+  //   storage: diskStorage({
+  //     destination: join(__dirname, '..', '..', 'uploads'),
+  //     filename: (req, file, cb) => {
+  //       const unique = Date.now() + '-' + Math.round(Math.random() * 1e9);
+  //       cb(null, `${file.fieldname}-${unique}${extname(file.originalname)}`);
+  //     },
+  //   }),
+  // }),
 ],
   controllers: [RegionController],
   providers: [RegionService],

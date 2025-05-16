@@ -9,13 +9,13 @@ export class RegionController {
   constructor(private readonly regionService: RegionService) { }
 
   @Post()
-  @UseInterceptors(FileInterceptor('image'))
+  // @UseInterceptors(FileInterceptor('image'))
   create(
-    @UploadedFile() file: Express.Multer.File,
+    // @UploadedFile() file: Express.Multer.File,
     @Body() createRegionDto: CreateRegionDto) {
-    if (file) {
-      createRegionDto.image = file.filename;
-    }
+    // if (file) {
+    //   createRegionDto.image = file.filename;
+    // }
     return this.regionService.post(createRegionDto);
   }
 

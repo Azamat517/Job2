@@ -7,6 +7,8 @@ import { IRegion } from "../interface/interface.region";
 interface RegionResponse {
     regOP: number;
     cities: IRegion[];
+    error: Error | null;
+    loading: boolean
 }
 
 interface State {

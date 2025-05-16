@@ -14,7 +14,7 @@ export class RegionService {
   async post(createRegionDto: CreateRegionDto, imageFilename?: string,) {
     const region = await this.regionRepo.create({
       ...createRegionDto,
-      image: imageFilename ?? createRegionDto.image,
+      // image: imageFilename ?? createRegionDto.image,
       datetime: new Date().toLocaleString(),
     })
     await this.regionRepo.save(region)

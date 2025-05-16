@@ -6,7 +6,7 @@ import { City } from "../interface/interface.city";
 interface CityResponse {
     cityOP: number;
     cities: City[];
-  }
+}
 
 interface State {
     cityInfo: CityResponse[] | null,

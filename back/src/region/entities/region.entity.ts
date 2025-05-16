@@ -11,26 +11,26 @@ export class Region {
     @Column()
     id_stops: string
 
-    // @Column()
-    // name_ru: string
+    @Column()
+    name_ru: string
 
-    // @Column()
-    // name_kz: string
+    @Column()
+    name_kz: string
 
-    // @Column()
-    // y_lat: string
+    @Column()
+    y_lat: string
 
-    // @Column()
-    // x_long: string
+    @Column()
+    x_long: string
 
-    // @Column()
-    // street: string
+    @Column()
+    street: string
 
-    // @Column()
-    // district: string
+    @Column()
+    district: string
 
-    @Column({ nullable: true })
-    image: string
+    // @Column({ nullable: true })
+    // image: string
 
     @Column()
     datetime?: string
