@@ -1,4 +1,4 @@
-import { GoogleMap, LoadScript } from "@react-google-maps/api"
+import { GoogleMap, LoadScript  } from "@react-google-maps/api"
 
 
 const containerStyle = {
@@ -7,19 +7,17 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 43.238949, // широта (пример: Алматы)
-  lng: 76.889709  // долгота
+  lat: 43.238949,
+  lng: 76.889709
 };
 
 const Maps = () => {
   return (
-    <LoadScript googleMapsApiKey="ТВОЙ_API_КЛЮЧ">
+    <LoadScript googleMapsApiKey="AIzaSyAcdz_BO9YOiz2_4MtBXSJ-ziqKgteiwLI">
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={12}
-      >
-        {/* Тут можно размещать маркеры, полигоны и прочее */}
+        zoom={12} >
       </GoogleMap>
     </LoadScript>
   )
